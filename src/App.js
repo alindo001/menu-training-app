@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'       //axios must be imported unlike .fetch()
 import Header from './components/ui/Header';
-import CharacterGrid from './components/menu/menuGrid'
+import ItemGrid from './components/menu/menuGrid'
 import Search from './components/ui/Search';
 import './App.css';
 
@@ -33,7 +33,7 @@ const App = () => {
     <div className="container">
      <Header/>
      <Search getQuery={(q)=> setQuery(q)}/>
-     <CharacterGrid isLoading={isLoading} items={items}/>
+     <ItemGrid isLoading={isLoading} items={items}/>
     </div>
   );
 }
