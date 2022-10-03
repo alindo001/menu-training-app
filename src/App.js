@@ -21,9 +21,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://menu-training-api-production.up.railway.app/api/menuItems?itemName=${query}`) 
-      console.log(result)
-      
+      const result = await axios(`https://menu-training-api-production.up.railway.app/api/menuItems/${query}`) 
       setItems(result.data)
       setIsLoading(false)
     }
@@ -34,7 +32,7 @@ const App = () => {
   return (
     <div className="container">
      <Header/>
-     {/* <Search getQuery={(q)=> setQuery(q)}/> */}
+     <Search getQuery={(q)=> setQuery(q)}/>
      <CharacterGrid isLoading={isLoading} items={items}/>
     </div>
   );
