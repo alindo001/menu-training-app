@@ -21,7 +21,8 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://menu-training-api-production.up.railway.app/api/menuItems/${query}`) 
+      const result = await axios(`https://menu-training-api-production.up.railway.app/api/menuItems/${query}`)  
+      // const result = await axios(`https://pythonapi-production.up.railway.app/${query}`) //alternate python api
       setItems(result.data)
       setIsLoading(false)
     }
